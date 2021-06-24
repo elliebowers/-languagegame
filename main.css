@@ -8,7 +8,12 @@ body{
     background-size: cover;
     background-repeat: repeat;
 }
-
+h1 {
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    background: lightskyblue
+}
 .center, .content {
     position: absolute;
     top: 50%;
