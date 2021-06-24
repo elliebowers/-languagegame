@@ -14,7 +14,7 @@ fetch(url)
 
 let clicked = false;
 const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukranian","Greek","English"];
-var btn=[];
+let btn=[];
 const language = ["polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
 let played = [];
 const number = [1,2,3,4];
@@ -66,10 +66,7 @@ btn[i].className=btnName;
 divBtn.appendChild(btn[i]);
 }
   
-clicked = true;
-}
 
-});
 
 
 
@@ -181,4 +178,19 @@ btn[7].addEventListener("click", function() {
     }
     source.setAttribute("src", song+".mp4");
 });
+
+
+
+
+
+
+
+
+clicked = true;
+}
+
+});
+
+
+
 
