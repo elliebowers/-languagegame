@@ -11,10 +11,10 @@ fetch(url)
     document.querySelector(".youtubeVideo").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
 });
 */
-
+let clicked = false;
 let start = document.querySelector("#start");
 start.addEventListener('click', function(event){
-    console.log("clicked");
+  if (clicked == false){
  event.preventDefault();
 
 let section = document.createElement("section");
@@ -39,13 +39,28 @@ btn.className="btn"+i;
 console.log(btn.name);
 divBtn.appendChild(btn);
 }
+  
+clicked = true;
+}
 
 });
 
 
-btn0.addEventListener("click", function() {});
-btn1.addEventListener("click", function() {});
-btn2.addEventListener("click", function() {});
-btn3.addEventListener("click", function() {});
-btn4.addEventListener("click", function() {});
-btn5.addEventListener("click", function() {});
+btn0.addEventListener("click", function() {
+
+});
+btn1.addEventListener("click", function() {
+
+});
+btn2.addEventListener("click", function() {
+
+});
+btn3.addEventListener("click", function() {
+
+});
+btn4.addEventListener("click", function() {
+
+});
+btn5.addEventListener("click", function() {
+
+});
