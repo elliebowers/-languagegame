@@ -13,9 +13,9 @@ fetch(url)
 */
 
 let clicked = false;
-const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukranian","Greek","English"];
+const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukrainian","Greek","English"];
 let btn=[];
-const language = ["polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
+const language = ["polish","korean","georgian","spanish","arabic","russian","ukrainian","greek"];
 let played = [];
 const number = [1,2,3,4];
 let languageSelect;
@@ -74,11 +74,16 @@ btn[0].addEventListener("click", function() {
   if(languageSelect=="polish"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
+    console.log(song);
     }
+   
     source.setAttribute("src", song+".mp4");
 });
 
@@ -89,7 +94,10 @@ btn[1].addEventListener("click", function() {
   if(languageSelect=="korean"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
@@ -103,7 +111,10 @@ btn[2].addEventListener("click", function() {
   if(languageSelect=="georgian"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
@@ -118,7 +129,10 @@ btn[3].addEventListener("click", function() {
   if(languageSelect=="spanish"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
@@ -131,7 +145,10 @@ btn[4].addEventListener("click", function() {
   if(languageSelect=="arabic"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
@@ -145,7 +162,10 @@ btn[5].addEventListener("click", function() {
   if(languageSelect=="russian"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
@@ -158,7 +178,10 @@ btn[6].addEventListener("click", function() {
   if(languageSelect=="ukranian"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
@@ -171,7 +194,10 @@ btn[7].addEventListener("click", function() {
   if(languageSelect=="greek"){
     alert("correct");
   }
-  while(played.includes(song)){
+  else{
+    alert("wrong");
+  }
+  while(!(played.includes(song))){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
     song  = languageSelect +numberSelect;
