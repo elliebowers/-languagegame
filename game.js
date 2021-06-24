@@ -14,35 +14,38 @@ fetch(url)
 
 let clicked = false;
 const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukranian","Greek","English"];
-
+var btn=[];
 const language = ["polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
 let played = [];
 const number = [1,2,3,4];
 let languageSelect;
 let numberSelect;
-let answer;
+let song;
 let start = document.querySelector("#start");
+
+let video;
+let source;
 start.addEventListener('click', function(event){
   if (clicked == false){
  event.preventDefault();
 languageSelect =language[Math.floor(Math.random() * (language.length-1))];
 numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-answer  = languageSelect +numberSelect;
+song  = languageSelect +numberSelect;
 
- let video = document.createElement("video");
+ video = document.createElement("video");
  video.id = "video";
  video.class="video";
  video.width = "320";
  video.height = "240";
  video.control = true;
  video.autoplay = true;
-let source = document.createElement("source");
+source = document.createElement("source");
 source.id="source";
 source.src="";
 source.type="video/mp4";
 
-played.push(answer);
-source.setAttribute("src", answer+".mp4");
+played.push(song);
+source.setAttribute("src", song+".mp4");
 video.appendChild(source);
 document.body.appendChild(video);
 
@@ -50,17 +53,17 @@ let divBtn = document.createElement("div");
 divBtn.id = "container";
 document.body.appendChild(divBtn);
 
-for(let i =0;i<9;i++){
+for(let i =0;i<8;i++){
 let value = array[i];
 let btnName = language[i];
-let btn = document.createElement("button");
+btn[i] = document.createElement("button");
 //btn.innerHTML = "Submit";
-btn.innerText = value;
-btn.type = "submit";
-btn.name = "btn"+i;
-btn.className=btnName;
+btn[i].innerText = value;
+btn[i].type = "submit";
+btn[i].name = "btn"+i;
+btn[i].className=btnName;
 
-divBtn.appendChild(btn);
+divBtn.appendChild(btn[i]);
 }
   
 clicked = true;
@@ -69,63 +72,113 @@ clicked = true;
 });
 
 
-polish.addEventListener("click", function() {
-  while(played.includes(answer)){
-    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
-    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
-    }
 
-});
-korean.addEventListener("click", function() {
-  while(played.includes(answer)){
+btn[0].addEventListener("click", function() {
+  if(languageSelect=="polish"){
+    alert("correct");
+  }
+  while(played.includes(song)){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer = languageSelect +numberSelect;
+    song  = languageSelect +numberSelect;
     }
-});
-georgian.addEventListener("click", function() {
-  while(played.includes(answer)){
-    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
-    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer = languageSelect +numberSelect;
-    }
-});
-spanish.addEventListener("click", function() {
-  while(played.includes(answer)){
-    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
-    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
-    }
-});
-arabic.addEventListener("click", function() {
-  while(played.includes(answer)){
-    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
-    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
-    }
-});
-russian.addEventListener("click", function() {
-  while(played.includes(answer)){
-    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
-    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
-    }
+    source.setAttribute("src", song+".mp4");
 });
 
-ukranian.addEventListener("click", function() {
-  while(played.includes(answer)){
+
+
+
+btn[1].addEventListener("click", function() {
+  if(languageSelect=="korean"){
+    alert("correct");
+  }
+  while(played.includes(song)){
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
+    song  = languageSelect +numberSelect;
     }
+    source.setAttribute("src", song+".mp4");
 });
 
-greek.addEventListener("click", function() {
-  while(played.includes(answer)){
+
+
+btn[2].addEventListener("click", function() {
+  if(languageSelect=="georgian"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    
     languageSelect =language[Math.floor(Math.random() * (language.length-1))];
     numberSelect = number[Math.floor(Math.random() * (number.length-1))];
-    answer  = languageSelect +numberSelect;
+    song  = languageSelect +numberSelect;
     }
+    source.setAttribute("src", song+".mp4");
+});
+
+
+
+btn[3].addEventListener("click", function() {
+  if(languageSelect=="spanish"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+    song  = languageSelect +numberSelect;
+    }
+    source.setAttribute("src", song+".mp4");
+});
+
+
+btn[4].addEventListener("click", function() {
+  if(languageSelect=="arabic"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+    song  = languageSelect +numberSelect;
+    }
+    source.setAttribute("src", song+".mp4");
+});
+
+
+
+btn[5].addEventListener("click", function() {
+  if(languageSelect=="russian"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+    song  = languageSelect +numberSelect;
+    }
+    source.setAttribute("src", song+".mp4");
+});
+
+
+btn[6].addEventListener("click", function() {
+  if(languageSelect=="ukranian"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+    song  = languageSelect +numberSelect;
+    }
+    source.setAttribute("src", song+".mp4");
+});
+
+
+btn[7].addEventListener("click", function() {
+  if(languageSelect=="greek"){
+    alert("correct");
+  }
+  while(played.includes(song)){
+    languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+    numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+    song  = languageSelect +numberSelect;
+    }
+    source.setAttribute("src", song+".mp4");
 });
 
