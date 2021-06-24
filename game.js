@@ -1,3 +1,7 @@
+let score = document.getElementById("scoreCanvas");
+let ctx = score.getContext("2d");
+let totalScore =0;
+let question =0;
 let clicked = false;
 const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukrainian","Greek","English"];
 let btn=[];
@@ -14,8 +18,18 @@ let song;
 let start = document.querySelector("#start");
 let video;
 let source;
+
+function updateScore(){
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, score.width, score.height);
+  ctx.fillStyle = 'black';
+  ctx.font= "60px Monaco";
+  ctx.fillText(totalScore,130,100);
+  }
+
 start.addEventListener('click', function(event){
   if (clicked == false){
+    updateScore();
  event.preventDefault();
  randomNumber= Math.floor(Math.random() * (combo.length-1));
 song= combo[randomNumber];
@@ -60,24 +74,40 @@ divBtn.appendChild(btn[i]);
 
 btn[0].addEventListener("click", function() {
   if(combo[randomNumber].includes("polish")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
+   
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
      
-      
-      console.log(song);
-      source.setAttribute("src", song+".mp4");
-      video.load();
+    source.setAttribute("src", song+".mp4");
+    video.load();
+    question++;
+    }
+    
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
 
 });
@@ -87,22 +117,38 @@ btn[0].addEventListener("click", function() {
 
 btn[1].addEventListener("click", function() {
   if(combo[randomNumber].includes("korean")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
     
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   
 });
@@ -111,22 +157,37 @@ btn[1].addEventListener("click", function() {
 
 btn[2].addEventListener("click", function() {
   if(combo[randomNumber].includes("georgian")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
      
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;}
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
       randomNumber= Math.floor(Math.random() * (combo.length-1));
       song= combo[randomNumber];
      
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
 
     
@@ -137,22 +198,38 @@ btn[2].addEventListener("click", function() {
 
 btn[3].addEventListener("click", function() {
   if(combo[randomNumber].includes("spanish")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
     
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   
 });
@@ -160,22 +237,38 @@ btn[3].addEventListener("click", function() {
 
 btn[4].addEventListener("click", function() {
   if(combo[randomNumber].includes("arabic")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
  
 });
@@ -184,22 +277,38 @@ btn[4].addEventListener("click", function() {
 
 btn[5].addEventListener("click", function() {
   if(combo[randomNumber].includes("russian")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
 
 });
@@ -207,44 +316,73 @@ btn[5].addEventListener("click", function() {
 
 btn[6].addEventListener("click", function() {
   if(combo[randomNumber].includes("ukrainian")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Correct");
     combo.splice(randomNumber,1);
       randomNumber= Math.floor(Math.random() * (combo.length-1));
       song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    else{
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
+    }
   }
  
 });
 
 
 btn[7].addEventListener("click", function() {
+ 
   if(combo[randomNumber].includes("greek")){
-    alert("correct");
+    totalScore++;
+    updateScore();
+    if(question ==10){
+      alert("Correct! Total Score is "+totalScore);
+      location.reload();
+    }
+    alert("Correct");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
 song= combo[randomNumber];
       
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
   }
   else{
-    alert("wrong");
+    if(question ==10){
+      alert("Wrong! Total Score is "+totalScore);
+      location.reload();
+    }
+    alert("Wrong");
     combo.splice(randomNumber,1);
     randomNumber= Math.floor(Math.random() * (combo.length-1));
     song= combo[randomNumber];
       source.setAttribute("src", song+".mp4");
       video.load();
+      question++;
   }
 
 });
