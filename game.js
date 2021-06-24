@@ -41,3 +41,11 @@ divBtn.appendChild(btn);
 }
 
 });
+
+
+btn0.addEventListener("click", function() {});
+btn1.addEventListener("click", function() {});
+btn2.addEventListener("click", function() {});
+btn3.addEventListener("click", function() {});
+btn4.addEventListener("click", function() {});
+btn5.addEventListener("click", function() {});
