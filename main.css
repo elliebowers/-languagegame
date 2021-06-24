@@ -1,7 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+body{
+    background-image:url("background.jpg");
+    background-size: cover;
+    background-repeat: repeat;
 }
 
 .center, .content {
@@ -9,9 +9,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
+  
 }
 .content {
     display: none;
+    
 }
 .click-me{
     display: block;
@@ -22,4 +24,36 @@ body {
     color: white;
     text-align: center;
     font-size: 22px;
+}
+
+.video{
+    display:block;
+    margin: auto;
+}
+.btn-style{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn0{
+  
+}
+.btn1{
+
+}
+.btn2{
+
+}
+.btn3{
+
+}
+.btn4{
+
+}
+.btn5{
+
 }

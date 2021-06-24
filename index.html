@@ -8,8 +8,8 @@
     <link rel = "stylesheeet" href = "main.css">
 
 </head>
-
 <body>
+    
     <main class = "game"></main>
     <section id = "content">
         <h1>Language Game</h1>
@@ -23,6 +23,7 @@
 
     <div class = "hidden light up js-throwaway"></div>
     </section>
+    
   <!-- Creating popup instruction  -->
     <div class="center">
         <input type="checkbox" id="click">
@@ -33,19 +34,21 @@
                 <label for="click" class="fas fa times"></label>
             </div>
             <label for="click" class="fas fa check"></label>
-            <p>when you hear the audio click on the language button you think is the correct answer
+            <p>When you hear the audio click on the language button you think is the correct answer
             </p>
             <div class="line"></div>
             <label for="click" class="close-btn">Close</label>
-        </div>
-
+        </div >
+    
 <!-- Creating start button/directions -->
 <footer class="directions">
-    <button class="start-button js-start">Start</button>
+    <button class="start-button js-start" id="start">Start</button>
     <span class="info js-info hidden"></span>
-  </footer>
+  </footer> 
 
-    
 </main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="game.js"></script>
 </body>
 </html>
