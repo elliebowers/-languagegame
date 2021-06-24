@@ -12,23 +12,30 @@ fetch(url)
 });
 */
 let clicked = false;
+const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukranian","Greek","English"];
+
+const language = ["Polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
+const languageSelect =language[Math.floor(Math.random() * (language.length-1))];
+const number = [1,2,3,4];
+const numberSelect = number[Math.floor(Math.random() * (number.length-1))];
+
 let start = document.querySelector("#start");
 start.addEventListener('click', function(event){
   if (clicked == false){
  event.preventDefault();
 
-let section = document.createElement("section");
-let iframe = document.createElement("iframe");
-iframe.width = "500px";
-iframe.height = "300px";
-iframe.className= "video";
-section.appendChild(iframe);
-document.body.appendChild(section);
+
+let source = document.querySelector("#source");
+
+source.setAttribute("src", "russian1.mp4");
+video.appendChild(source);
+section.appendChild(video);
+
 let divBtn = document.createElement("div");
 divBtn.id = "container";
 document.body.appendChild(divBtn);
-let array = ["Urdu","Korean","Georgian","Spanish","Arabic","Russian"]
-for(let i =0;i<6;i++){
+
+for(let i =0;i<9;i++){
 let value = array[i];
 let btn = document.createElement("button");
 //btn.innerHTML = "Submit";
@@ -62,5 +69,18 @@ btn4.addEventListener("click", function() {
 
 });
 btn5.addEventListener("click", function() {
+
+});
+
+btn6.addEventListener("click", function() {
+
+});
+
+btn7.addEventListener("click", function() {
+
+});
+
+
+btn6.addEventListener("click", function() {
 
 });
