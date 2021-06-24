@@ -14,7 +14,7 @@ fetch(url)
 let clicked = false;
 const array = ["Polish","Korean","Georgian","Spanish","Arabic","Russian","Ukranian","Greek","English"];
 
-const language = ["Polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
+const language = ["polish","korean","georgian","spanish","arabic","russian","ukranian","greek"];
 const languageSelect =language[Math.floor(Math.random() * (language.length-1))];
 const number = [1,2,3,4];
 const numberSelect = number[Math.floor(Math.random() * (number.length-1))];
@@ -25,11 +25,22 @@ start.addEventListener('click', function(event){
  event.preventDefault();
 
 
-let source = document.querySelector("#source");
 
-source.setAttribute("src", "russian1.mp4");
+ let video = document.createElement("video");
+ video.id = "video";
+ video.class="video";
+ video.width = "320";
+ video.height = "240";
+ video.control = true;
+ video.autoplay = true;
+let source = document.createElement("source");
+source.id="source";
+source.src="";
+source.type="video/mp4";
+let song  = languageSelect +numberSelect;
+source.setAttribute("src", song+".mp4");
 video.appendChild(source);
-section.appendChild(video);
+document.body.appendChild(video);
 
 let divBtn = document.createElement("div");
 divBtn.id = "container";
