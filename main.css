@@ -1,3 +1,8 @@
+
+h1{
+    text-align:center
+
+}
 body{
     background-image:url("background.jpg");
     background-size: cover;
@@ -47,6 +52,7 @@ body{
     visibility: visible;
 }
 .header {
+   
     height: 68px;
     background:lightskyblue;
     overflow: hidden;
@@ -117,25 +123,4 @@ p{
 .video{
     display:block;
     margin: auto;
-}
-
-
-
-.btn0{
-  
-}
-.btn1{
-
-}
-.btn2{
-
-}
-.btn3{
-
-}
-.btn4{
-
-}
-.btn5{
-
 }
