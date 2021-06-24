@@ -18,11 +18,9 @@ start.addEventListener('click', function(event){
  event.preventDefault();
 
 let section = document.createElement("section");
-let iframe = document.createElement("iframe");
-iframe.width = "500px";
-iframe.height = "300px";
-iframe.className= "video";
-section.appendChild(iframe);
+let audio= document.createElement("audio");
+iframe.className= "audio";
+section.appendChild(audio);
 document.body.appendChild(section);
 let divBtn = document.createElement("div");
 divBtn.id = "container";
