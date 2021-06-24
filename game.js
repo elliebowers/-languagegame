@@ -25,7 +25,7 @@ iframe.className= "video";
 section.appendChild(iframe);
 document.body.appendChild(section);
 let divBtn = document.createElement("div");
-divBtn.className = "btn-style";
+divBtn.id = "container";
 document.body.appendChild(divBtn);
 let array = ["Urdu","Korean","Georgian","Spanish","Arabic","Russian"]
 for(let i =0;i<6;i++){

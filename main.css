@@ -30,7 +30,7 @@ body{
     display:block;
     margin: auto;
 }
-.btn-style{
+#container{
     background-color: #4CAF50; /* Green */
     border: none;
     padding: 15px 32px;
