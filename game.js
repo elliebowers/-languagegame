@@ -19,7 +19,7 @@ start.addEventListener('click', function(event){
 
 let section = document.createElement("section");
 let audio= document.createElement("audio");
-iframe.className= "audio";
+audio.className= "audio";
 section.appendChild(audio);
 document.body.appendChild(section);
 let divBtn = document.createElement("div");
