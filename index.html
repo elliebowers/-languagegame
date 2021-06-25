@@ -13,7 +13,7 @@
     <main class = "game"></main>
     <section id = "content">
         <h1>Language Game</h1>
-        <canvas name="canvas" class = "canvas" id="scoreCanvas">
+        <canvas name="canvas" class = "canvas" id="scoreCanvas" style="display:none"></canvas>
         </canvas>
     <div class = "language-container">
         <div class = "spanish-button"></div>
@@ -26,8 +26,10 @@
     
   <!-- Creating popup instruction  -->
     <div class="center">
+      
         <input type="checkbox" id="click">
-        <label for="click" class="instructions">Instructions</label>
+        <label for="click" class="instructions" id="intro">Instructions</label>
+      
         <div class="content" >
             <div class="header" > 
                 <h2>How To Play</h2>
@@ -39,11 +41,14 @@
             <label for="click" class="close-btn">Close</label>
         </div >
     
+    
+    
 <!-- Creating start button/directions -->
 <footer class="directions">
     <button class="start-button js-start" id="start">Start</button>
     <span class="info js-info hidden"></span>
 </footer> 
+</div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>

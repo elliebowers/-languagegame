@@ -133,7 +133,6 @@ h1 {
     display: none
 }
 .instructions{
-    display: block;
     width: 160px;
     height: 50px;
     background: lightskyblue;

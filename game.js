@@ -26,24 +26,16 @@ function updateScore(){
   ctx.font= "60px Monaco";
   ctx.fillText(totalScore,130,100);
   }
-  let divBtn = document.createElement("div");
-  divBtn.id = "container";
-  document.body.appendChild(divBtn);
   
-  for(let i =0;i<8;i++){
-  let value = array[i];
-  let btnName = language[i];
-  btn[i] = document.createElement("button");
-  //btn.innerHTML = "Submit";
-  btn[i].innerText = value;
-  btn[i].type = "submit";
-  btn[i].name = "btn"+i;
-  btn[i].className=btnName;
-  
-  divBtn.appendChild(btn[i]);
-  }
 start.addEventListener('click', function(event){
+
   if (clicked == false){
+    score.style.display="initial";
+    let startButton = document.getElementById("start");
+    startButton.style.display="none";
+    let instruction = document.getElementById("intro");
+    instruction.style.display="none";
+   
     updateScore();
  event.preventDefault();
  randomNumber= Math.floor(Math.random() * (combo.length-1));
@@ -67,7 +59,22 @@ video.appendChild(source);
 document.body.appendChild(video);
 
 
-  
+let divBtn = document.createElement("div");
+divBtn.id = "container";
+document.body.appendChild(divBtn);
+
+for(let i =0;i<8;i++){
+let value = array[i];
+let btnName = language[i];
+btn[i] = document.createElement("button");
+//btn.innerHTML = "Submit";
+btn[i].innerText = value;
+btn[i].type = "submit";
+btn[i].name = "btn"+i;
+btn[i].className=btnName;
+
+divBtn.appendChild(btn[i]);
+}
 
 
 
