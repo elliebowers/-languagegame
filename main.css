@@ -50,6 +50,7 @@ h1 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin-left: 6cm;
 }
 .russian{
     background-color: #0ee7dc; /* Green */
