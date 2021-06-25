@@ -163,6 +163,8 @@ h1 {
     opacity: 1;
     visibility: visible;
 }
+
+
 .header {
    
     height: 68px;
@@ -178,7 +180,7 @@ h1 {
 
 }
 .fa-times{
-    positio n: absolute;
+    position: absolute;
     right: 20px;
     top: 20px;
     color: #e8f7fc;
