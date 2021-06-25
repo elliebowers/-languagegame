@@ -137,3 +137,7 @@ p{
     height:50px;
     background-color: whitesmoke;
   }
+
+ #video {
+     align-items: center;
+ }
