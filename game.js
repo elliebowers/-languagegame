@@ -62,7 +62,6 @@ document.body.appendChild(video);
 let divBtn = document.createElement("div");
 divBtn.id = "container";
 document.body.appendChild(divBtn);
-
 for(let i =0;i<8;i++){
 let value = array[i];
 let btnName = language[i];
