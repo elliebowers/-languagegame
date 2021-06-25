@@ -34,13 +34,13 @@ start.addEventListener('click', function(event){
  randomNumber= Math.floor(Math.random() * (combo.length-1));
 song= combo[randomNumber];
 
- video = document.createElement("video");
+ <center>video = document.createElement("video");
  video.id = "video";
  video.class="video";
  video.width = "320";
  video.height = "240";
  video.control = true;
- video.autoplay = true;
+ video.autoplay = true;</center>
 
 source = document.createElement("source");
 source.id="source";

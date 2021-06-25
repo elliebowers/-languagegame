@@ -10,7 +10,7 @@ body{
 }
 h1 {
     text-align: center;
-    color: white;
+    color: rgb(243, 236, 236);
     border-radius: 3px;
     background: lightskyblue
 }
@@ -20,6 +20,24 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%)
   
+}
+
+.start-button{
+   
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+}
+
+video{
+    position: absolute;
+    border-top-left-radius: 50%;
 }
 
 #click {
