@@ -26,7 +26,22 @@ function updateScore(){
   ctx.font= "60px Monaco";
   ctx.fillText(totalScore,130,100);
   }
-
+  let divBtn = document.createElement("div");
+  divBtn.id = "container";
+  document.body.appendChild(divBtn);
+  
+  for(let i =0;i<8;i++){
+  let value = array[i];
+  let btnName = language[i];
+  btn[i] = document.createElement("button");
+  //btn.innerHTML = "Submit";
+  btn[i].innerText = value;
+  btn[i].type = "submit";
+  btn[i].name = "btn"+i;
+  btn[i].className=btnName;
+  
+  divBtn.appendChild(btn[i]);
+  }
 start.addEventListener('click', function(event){
   if (clicked == false){
     updateScore();
@@ -34,13 +49,13 @@ start.addEventListener('click', function(event){
  randomNumber= Math.floor(Math.random() * (combo.length-1));
 song= combo[randomNumber];
 
- <center>video = document.createElement("video");
+video = document.createElement("video");
  video.id = "video";
- video.class="video";
+ video.className="video";
  video.width = "320";
  video.height = "240";
  video.control = true;
- video.autoplay = true;</center>
+ video.autoplay = true;
 
 source = document.createElement("source");
 source.id="source";
@@ -51,22 +66,7 @@ source.setAttribute("src", song+".mp4");
 video.appendChild(source);
 document.body.appendChild(video);
 
-let divBtn = document.createElement("div");
-divBtn.id = "container";
-document.body.appendChild(divBtn);
 
-for(let i =0;i<8;i++){
-let value = array[i];
-let btnName = language[i];
-btn[i] = document.createElement("button");
-//btn.innerHTML = "Submit";
-btn[i].innerText = value;
-btn[i].type = "submit";
-btn[i].name = "btn"+i;
-btn[i].className=btnName;
-
-divBtn.appendChild(btn[i]);
-}
   
 
 
